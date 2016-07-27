@@ -1,0 +1,25 @@
+%This a program to prints nth fibonacci number
+_main
+	type int : b2;
+	type int : b3;
+	type int : b4;
+	type int : b5 : global;
+	type int : b6 : global;
+	read(b5);
+	b2 <--- 1;
+	b3 <--- 1;
+	b4 <--- 1;
+	%write(b5);
+	if(b5>=2)
+	then
+		b6 <--- 2;
+		while(b6<=b5)	
+			b4 <--- b3+b2;
+			b2 <--- b3;
+			b3 <--- b4;
+			b6 <--- b6 + 1; 
+		endwhile
+	endif
+	write(b4);
+	return;
+end

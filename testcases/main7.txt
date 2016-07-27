@@ -1,0 +1,10 @@
+%This a program tests the capability to handle large arimetic expression
+%If input is 12 the output should be 84
+_main
+	type int : b3;
+	type int : d5:global;
+	read(b3);
+	d5<---b3*2+2*(3-1+4*5/5+3/3-1)*4/4+2*b3/b3*(b3+b3);
+	write(d5);
+	return;
+end

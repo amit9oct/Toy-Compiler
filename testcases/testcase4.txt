@@ -1,0 +1,20 @@
+%This a program to find modulo
+% d2 mod d3
+_mod  input parameter list [int d2,int d3]
+output parameter list[int d4];
+		type int : d2c2;
+		type int : d5;
+		d5 <--- d2/d3;
+		d4 <--- d2 - d5*d3;
+	return [d4];
+end
+
+_main
+	type int : b3;
+	type int : b4;
+	type int : b5;
+	read(b3);
+	read(b4);
+	[b5]<--- call _mod with parameters [b3,b4];
+	return;
+end

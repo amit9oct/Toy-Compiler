@@ -1,0 +1,52 @@
+_read input parameter list[int b7]
+output parameter list [ record #marks b3c45];
+	record #marks
+		type real : maths; 
+		type real: physics; 
+		type real: chemistry;
+	endrecord;
+	type real : b3;
+	type int : c2;
+	b3<---b2d3/b2d3;
+	return [b3c45];
+end
+_readMarks input parameter list[int b7]
+output parameter list [ record #marks b3c45];
+	record #marks
+		type real : maths; 
+		type real: physics; 
+		type real: chemistry;
+	endrecord;
+	type record #marks: b2d3 : global;
+	type real : b3;
+	type int : c2;
+	b3<---b2d3/b2d3;
+	b3<---c2/b3;
+	read(b3.chem);
+	[b3c45] <--- call _read with parameters [b5];
+	return [b3c45];
+end
+_read1 input parameter list[int b2d7]
+output parameter list [ int b3c4];
+	type real : b3;
+	type int : c2;
+	b3<---b2d3/b2d4.maths;
+	return [b3c4];
+end
+_read1 input parameter list[int b2d7]
+output parameter list [ int b3c4];
+	type real : b3;
+	type int : c2;
+	b3<---b2d3/b2d4.maths;
+	return [b3c4];
+end
+_main
+	type int : b3;
+	type int : b4;
+	type int : b5;
+	type record #marks: b2d3;
+	read(b3);
+	read(b4);
+	[b5]<--- call _readMarks with parameters [b3,b5];
+	return;
+end

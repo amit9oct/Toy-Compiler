@@ -1,0 +1,18 @@
+%This a program to find factorial of a given number
+_main
+	type int : b3;
+	type int : d4;
+	type int : d5:global;
+	read(b3);
+	d4 <--- 1;
+	if(b3!=0)
+		then
+			d5 <--- 1;
+			while(d5<=b3)
+				d4 <--- d4*d5;
+				d5 <--- d5+1;  
+			endwhile
+	endif
+	write(d4);
+	return;
+end
