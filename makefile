@@ -7,6 +7,7 @@
 
 #Doing all steps in one go
 all:
+	mkdir bin
 	make error.o
 	make lexer.o
 	make set.o
@@ -19,14 +20,10 @@ all:
 	make codeGeneration.o
 	make toycompiler
 
-#removing the *.o files and executables
+#removing the *.o files executables in bin
 remove:
-	rm bin/*.o
-	rm bin/toycompiler
-	rm *.out
-	rm *.o
-	rm *.asm
-	rm toycompiler
+	rm -rf bin
+	rm ./toycompiler
 
 remove_all:
 	make remove
