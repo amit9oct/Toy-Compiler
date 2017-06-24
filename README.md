@@ -1,13 +1,13 @@
 # Toy-Compiler
 
-========================
-Author: Amitayush Thakur
-=========================
+### Author: Amitayush Thakur
+-----------------------------
+
 Use: Anyone who wants to learn how to design a compiler for simple language can use this as a tool. It has lexer, parser and code generator everything written in C language. It doesn't use any external libraries. Also for asm it uses nasm.
 
-==============
-Instructions
-==============
+### Instructions
+-----------------------------
+
 1. Making the repository:
 	###Use $> make or $> make all
 
